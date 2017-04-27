@@ -1,3 +1,20 @@
+<?php
+$phpc_server = $_SERVER['SERVER_NAME'];
+if(!empty($_SERVER["SERVER_PORT"]) && $_SERVER["SERVER_PORT"] != 80)
+	$phpc_server .= ":{$_SERVER["SERVER_PORT"]}";
+
+// Protcol ex. http or https
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off'
+		|| $_SERVER['SERVER_PORT'] == 443
+		|| isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https'
+		|| isset($_SERVER['HTTP_X_FORWARDED_SSL']) && $_SERVER['HTTP_X_FORWARDED_SSL'] == 'on') {
+    $phpc_proto = "https";
+} else {
+    $phpc_proto = "http";
+}
+
+$phpc_home_url = $phpc_proto."://".$phpc_server;
+?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
 <!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
@@ -10,7 +27,7 @@
 <meta name="description" content="Groz" />
 <meta name="keywords" content="Groz" />
 <meta name="robots" content="index, follow"/>
-
+<!--<meta http-equiv="refresh" content="10; url=<?php echo $phpc_home_url;?>/groz"/>-->
 
 
 <meta http-equiv="Cache-Control" content="no-cache" />
@@ -122,15 +139,15 @@ function MM_validateForm() { //v4.0
 <body onload="flvXAS1(1,1,30,1)" >
 <div class="gridContainer clearfix"> 
    	<div id="gheader">
-   		<div id="logo"></div>             
+   		<div id="logo"><a href='<?php echo $phpc_home_url?>' target="_blank"></a></div>             
 	</div>
   <div id="gmenu">
       		<div id='cssmenu'>
             <ul>              
-                <li><span>LMS</span></li>
-                <li><span>Intranet</span></li>
-                <li><span>Groz-Tools</span></li>
-				<li><span>Contact</span></li>            </ul>
+                <li><a href='<?php echo $phpc_home_url?>/lms'><span>LMS</span></a></li>
+                <li><a href='<?php echo $phpc_home_url?>/groz'><span>Intranet</span></a></li>
+                <li><a href='http://www.groz-tools.com'><span>Groz-Tools</span></a></li>
+				<li><a href='<?php echo $phpc_home_url?>/groz/contact.php'><span>Contact</span></a></li>            </ul>
       </div>	
   </div>
       
@@ -213,7 +230,10 @@ function MM_validateForm() { //v4.0
       <div id = "selectdiv">
       <form name="form1" id="form1">
       <select name="grozjumpmenu">
-        <option value="" selected="selected">Select</option>                      
+        <option value="" selected="selected">Select</option>
+        <option value="<?php echo $phpc_home_url?>/lms/~window:New">LMS</option>        
+        <option value="http://www.groz-tools.com~window:New">GROZ-TOOLS</option>
+         <option value="<?php echo $phpc_home_url?>/groz/contact.php~window:New">CONTACT</option>               
       </select>
       <input type="button" name="Button1" value="Go" onclick="P7_JumpMenuGo('grozjumpmenu',0)"  style = "border: 1px solid #F60; color: #FFF" class = "blackgradient"/>
     </form>
