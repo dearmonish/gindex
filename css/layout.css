@@ -1,0 +1,282 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	15;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 88.626%;
+	padding-left: 1.1869%;
+	padding-right: 1.1869%;
+	min-height:100%;
+}
+#gheader {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 20.5357%;
+	width: 58.9285%;
+	display: block;
+}
+#advertisement {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#gmenu {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#cssmenu > ul > li {  
+  float: none;
+  width: 100%;
+}
+#AdMainDiv
+{
+	width: 1232px; 
+	height: 436px; 
+	position:relative; 
+	text-align: left;
+	display:none;
+}
+#AdTitleRotateDiv
+{
+	position: absolute; 
+	right:27px;
+	width:900px;
+	bottom:20px;
+	height:80px;
+	display:none;	
+}
+#gscroll
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	height: 250px;	
+	position: relative;	
+	border-top: none;
+	border-left: none;	
+	border-right: none;
+	border-bottom: none;	
+	background: url(../images/scroll.jpg);
+	
+}
+#cssmenu > ul > li > a {	
+	border-top: none;	
+	border-right: none;	
+	border-left: none;		
+}
+#otherdiv {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;		
+	position: relative;	
+	border-top: none;
+	border-left: none;	
+	border-right: none;
+}
+
+#otherdiv1 {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#otherdiv2 {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#otherdiv3 {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#otherdiv4 {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 85%;
+	
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: auto;
+	min-height:100%;
+	position: relative;
+}
+#gheader {
+	position:absolute;
+	margin-left: 0px;
+	margin-top: 0px;
+	width: 100%;
+	display: block;
+}
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 8.4249%;
+	width: 24.1758%;
+	display: block;
+}
+#advertisement {
+	position:absolute;		
+	margin-top: 163px;
+	margin-left: 0px;
+	width: 100%;
+	display: block;	
+	z-index:1;		
+}
+#gmenu {
+	position:absolute;		
+	margin-top: 120px;
+	margin-left: 0px;
+	width: 100%;
+	display: block;	
+	z-index:3;		
+}
+#cssmenu > ul > li {
+  float: left;
+  width: 100px;
+}
+#AdMainDiv
+{
+	width: 100%; 
+	height: 354px; 
+	position:relative; 
+	text-align: left;
+	display:block;
+}
+#AdTitleRotateDiv
+{
+	position: absolute; 
+	right:10px;
+	width:670px;
+	bottom:20px;
+	height:80px;
+	display:block;	
+}
+#gscroll
+{	
+	position: absolute;
+	height: 250px;
+	width: 220px;	
+	margin-left: 45px;
+	margin-top: 173px;
+	display: block;
+	z-index: 2;
+	border: 1px dotted #F60;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.6)), color-stop(100%,rgba(0,0,0,0.6)));
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+background: -o-linear-gradient(top,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+background: -ms-linear-gradient(top,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+background: linear-gradient(to bottom,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#99000000',GradientType=0 );		
+}
+#cssmenu > ul > li > a {
+	
+	border-top: none;	
+	border-bottom: none;	
+	border-left: none;	
+}
+#otherdiv {
+	position:absolute;		
+	margin-top: 517px;
+	margin-left: 0px;
+	width: 100%;
+	display: block;	
+	z-index:1;		
+}
+#otherdiv1 {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+	margin-left: 0px;
+	width: 49.5%;
+	display: block;
+}
+#otherdiv2 {
+	clear: none;
+	float: left;
+	margin-top: 10px;
+	margin-left: 1%;
+	width: 49.5%;
+	display: block;
+}
+#otherdiv3 {
+	clear: both;
+	float: left;
+	margin-top: 10px;	
+	width: 49.5%;
+	display: block;
+}
+#otherdiv4 {
+	clear: none;
+	float: left;
+	margin-top: 10px;
+	margin-left: 1%;
+	width: 49.5%;
+	display: block;
+}
+}

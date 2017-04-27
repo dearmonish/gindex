@@ -1,0 +1,142 @@
+/*!
+Styles for full screen background video demo
+*/
+/* =============================================================================
+  RESETS
+============================================================================= */
+html,
+body,
+div,
+h1,
+p,
+a,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================================================
+  HTML, BODY
+============================================================================= */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Oxygen", sans-serif;
+  line-height: 1.5;
+}
+
+/* =============================================================================
+  CONTENT
+============================================================================= */
+.content {
+  position: relative;
+  top: 30%;
+  z-index: 2;
+  margin: 0 auto;
+  max-width: 720px;
+  text-align: center;
+}
+
+.content__heading {
+  margin-bottom: 24px;
+  color: #272727;
+  font-size: 44px;
+}
+
+.content__teaser {
+  margin-bottom: 24px;
+  color: #595959;
+  font-size: 22px;
+}
+
+.content__cta {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 48px;
+  color: #ff3c64;
+  font-size: 22px;
+  text-decoration: none;
+  border: solid 4px #ff3c64;
+}
+
+/* =============================================================================
+  VIDEO
+============================================================================= */
+.video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -1;  
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);  
+}
+#gscroll
+{	
+	position: absolute;
+	height: 250px;
+	width: 220px;	
+	margin-left: 45px;
+	margin-top: 173px;
+	display: block;
+	z-index: 2;
+	border: 1px dotted #F60;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.6)), color-stop(100%,rgba(0,0,0,0.6)));
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+background: -o-linear-gradient(top,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+background: -ms-linear-gradient(top,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+background: linear-gradient(to bottom,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#99000000',GradientType=0 );		
+}
+.blackgradient
+{
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.6)), color-stop(100%,rgba(0,0,0,0.6)));
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+background: -o-linear-gradient(top,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+background: -ms-linear-gradient(top,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+background: linear-gradient(to bottom,  rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#99000000',GradientType=0 );				
+}
+.whitegradient
+{
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(left, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0.5)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%);
+background: linear-gradient(to right, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80ffffff',GradientType=1 );
+}
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 20.5357%;
+	width: 58.9285%;
+	display: block;
+}
+#logo {
+	margin-top: 40px;	
+}
+#logo a{
+	height: 45px;
+	width: 200px;
+	background-image: url(../images/templatemo_logo.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+}
